@@ -271,7 +271,7 @@ function reducer(
         ...state,
         fetchingGlobalSchema: false,
         fetchedGlobalSchema: true,
-        globalSchema: action.payload.data.globalSchema.schema,
+        globalSchema: action.payload.data.globalSchema?.schema ?? null,
         errorGlobalSchema: null,
       };
     case ERROR(ACTION_TYPE.FETCH_GLOBAL_SCHEMA):
